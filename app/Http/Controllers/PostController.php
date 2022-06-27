@@ -50,7 +50,12 @@ class PostController extends Controller
             'description' => $request->description,
         ]);
         $post->save();
-        return $this->index();
+
+       
+        return $this->index()->with([
+            'message_success' => "The Post " . $post->title . " was created"
+        ]);
+
     }
 
     /**
