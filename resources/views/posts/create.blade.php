@@ -11,15 +11,15 @@
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <input type="text" class="form-control" id="title" name="title">
+                                <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}">
                             </div>
                             <div class="form-group">
                                 <label for="image">Image</label>
-                                <input type="text" class="form-control" id="image" name="image" placeholder="https://picsum.photos/200">
+                                <input type="text" class="form-control" id="image" name="image" placeholder="https://picsum.photos/200" value="{{old('image')}}">
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+                                <textarea class="form-control" id="description" name="description" rows="5">{{old('description')}}</textarea>
                             </div>
                             <input class="btn btn-primary mt-4" type="submit" value="Save Post">
                         </form>
