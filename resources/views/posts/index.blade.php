@@ -11,13 +11,17 @@
                     <ul class="list-group">
                         @foreach($posts as $post)
                             <li class="list-group-item">
-                                <p>{{$post->name}}</p> 
+                                <p>{{$post->title}}</p> 
                                 <img src="{{$post->image}}" alt="">
                                 <p>{{$post->description}}</p>
                             </li>
                         @endforeach
                     </ul>
                 </div>
+            </div>
+
+            <div class="mt-2">
+                <a class="btn btn-success btn-sm" href="/posts/create"><i class="fa-solid fa-circle-plus"></i> Create New Post</a>
             </div>
         </div>
     </div>
