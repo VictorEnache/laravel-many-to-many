@@ -77,7 +77,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -89,7 +89,23 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' =>'required|min:3',
+            'image' =>'required',
+            'description' =>'required|min:5'
+        ]);
+
+        $post->update([
+            'title' => $request->title,
+            'image' => $request->image,
+            'description' => $request->description,
+        ]);
+        
+
+       
+        return $this->index()->with([
+            'message_success' => "The Post " . $post->title . " was updated"
+        ]);
     }
 
     /**
@@ -100,6 +116,10 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $oldName = $post->title;
+        $post->delete();
+        return $this->index()->with([
+            'message_success' => "The Post " . $oldName . " was deleted"
+        ]);
     }
 }
