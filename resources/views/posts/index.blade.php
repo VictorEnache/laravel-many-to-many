@@ -11,7 +11,7 @@
                     <ul class="list-group">
                         @foreach($posts as $post)
                             <li class="list-group-item">
-                                <p>{{$post->title}}</p> 
+                                <div><a title="show the details" href="/posts/{{$post->id}} ">{{$post->title}}</a></div>  
                                 <img src="{{$post->image}}" alt="">
                                 <p>{{$post->description}}</p>
                             </li>
