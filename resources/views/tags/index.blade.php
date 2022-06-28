@@ -23,7 +23,7 @@
                                 </li>
                             @endforeach
                         </ul>
-                        <a class="btn btn-success btn-sm mt-3" href="/tag/create"><i class="fas fa-plus-circle"></i> New Tag</a>
+                        <a class="btn btn-success btn-sm mt-3" href="/tags/create"><i class="fas fa-plus-circle"></i> New Tag</a>
                     </div>
                 </div>
             </div>

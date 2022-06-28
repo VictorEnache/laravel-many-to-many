@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Edit TheS Post</div>
                     <div class="card-body">
-                        <form action="/posts/{{$tag->id}}" method="post">
+                        <form action="/tags/{{$tag->id}}" method="post">
                             @csrf
                             @method('PUT')
                             <div class="form-group">

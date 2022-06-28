@@ -17,7 +17,7 @@
 
                             <div class="form-group">
                                 <label for="style">Style</label>
-                                <input type="text" class="form-control {{$errors->has('style') ? 'border-danger' : ''}}" id="style" name="style" placeholder="https://picsum.photos/200" value="{{old('style')}}">
+                                <input type="text" class="form-control {{$errors->has('style') ? 'border-danger' : ''}}" id="style" name="style" placeholder="primary" value="{{old('style')}}">
                                 <small class="form-text text-danger">{{$errors->first('style')}}</small>
                             </div>
 
