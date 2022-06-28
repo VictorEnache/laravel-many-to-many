@@ -23,6 +23,7 @@ Route::get('/info', function () {
 });
 
 Route::resource('/posts', 'PostController');
+Route::resource('/tags', 'TagController');
 
 Auth::routes();
 

@@ -38,6 +38,7 @@
                         <li><a class="nav-link {{Request::is('/') ? 'active bg-info' : ''}}" href="/">Starting Page</a></li>
                         <li><a class="nav-link {{Request::is('info') ? 'active bg-info' : ''}}" href="/info">Info</a></li>
                         <li><a class="nav-link {{Request::is('posts') ? 'active bg-info' : ''}}" href="/posts">Posts</a></li>
+                        <li><a class="nav-link {{Request::is('tags') ? 'active bg-info' : ''}}" href="/tags">Tags</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
