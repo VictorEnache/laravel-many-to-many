@@ -11,6 +11,13 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\User::class, 10)->create();
+        factory(App\User::class, 10)->create()
+        ->each(function($user){
+            factory(App\Post::class, rand(1,4))->create(
+                [
+                    'user_id' => $user->id
+                ]
+            );
+        });
     }
 }
